@@ -1,11 +1,11 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def hello_world():
-    return 'This is tim the world thingy!!!!!!!!!'
+    return render_template("settings.html")
 
 
 if __name__ == '__main__':
