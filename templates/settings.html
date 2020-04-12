@@ -99,6 +99,12 @@
         form {
             padding: 10px;
         }
+
+        button {
+            width: 100%;
+            height: 50px;
+        }
+
     </style>
 </head>
 <body>
@@ -117,7 +123,7 @@
 
         <div class="join">
             <h4>Join Existing Game</h4>
-            <form>
+            <form action="/join" method="post">
                 <label for="join_game_name">Game Name:</label><br>
                 <input type="text" id="join_game_name" name="join_game_name"><br>
                 <label for="join_game_password">Game password:</label><br>
@@ -128,6 +134,8 @@
                 </label><input type="text" id="join_player_name" name="player_name"><br>
                 <label for="join_player_password">player password:</label><br>
                 <input type="text" id="join_player_password" name="join_player_password"><br>
+                <br>
+                <button type="submit" value="submit">Start</button>
             </form>
             <p>
                 Join a game that has already been created with the
@@ -140,7 +148,7 @@
 
         <div class="start">
             <h4>Create Game</h4>
-            <form>
+            <form action="/create" method="post">
                 <label for="create_game_name">Game Name:</label><br>
                 <input type="text" id="create_game_name" name="create_game_name"><br>
                 <label for="create_game_password">Game password:</label><br>
@@ -151,6 +159,8 @@
                 <input type="text" id="player_name" name="player_name"><br>
                 <label for="player_password">player password:</label><br>
                 <input type="text" id="player_password" name="player_password"><br>
+                <br>
+                <button type="submit" value="submit">Start</button>
             </form>
             <p>
                 Create your own game!
